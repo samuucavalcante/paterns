@@ -1,14 +1,16 @@
-import type { TaxTypeInterface } from "../contracts/TaxTypeInterface";
+import type { ITaxType } from "./ITaxType";
+import { TaxCalculatorFactory } from "./TaxCalculatorFactory";
 
 export class TaxCalculatorService {
-  private taxType: TaxTypeInterface = {} as TaxTypeInterface;
+  private taxType: ITaxType = {} as ITaxType;
 
   public calculate(amount: number): number {
-    const value = this.taxType.calculate(amount);
+    const tax = TaxCalculatorFactory.create(this.taxType);
+    const value = tax.calculate(amount);
     return value;
   }
 
-  public setTaxType(taxType: TaxTypeInterface): this {
+  public setTaxType(taxType: ITaxType) {
     this.taxType = taxType;
     return this;
   }
