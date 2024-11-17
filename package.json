@@ -6,9 +6,14 @@
     "dev": "bun --hot run src/server.ts"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/pdfkit": "^0.13.5"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "pdf-creator-node": "^2.3.5",
+    "pdfkit": "^0.15.1"
   }
 }
