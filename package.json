@@ -1,0 +1,14 @@
+{
+  "name": "paterns",
+  "module": "src/server.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot run src/server.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
